@@ -1,0 +1,14 @@
+networks:
+  n8n_n8n_network:
+    external: true
+
+services:
+  web-print:
+    build: .
+    restart: always
+    ports:
+      - "8631:8631"
+    volumes:
+      - /var/run/cups/cups.sock:/var/run/cups/cups.sock
+    networks:
+      - n8n_n8n_network

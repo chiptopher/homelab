@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 @app.route("/print", methods=["POST"])
-def print_pdf():
+def print_file():
     if "file" not in request.files:
         return jsonify({"error": "No file provided"}), 400
 
@@ -23,7 +23,7 @@ def print_pdf():
 
     try:
         result = subprocess.run(
-            ["lp", "-d", "myprinter", tmp_path],
+            ["lp", tmp_path],
             capture_output=True,
             text=True,
         )

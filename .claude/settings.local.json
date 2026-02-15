@@ -3,7 +3,8 @@
     "allow": [
       "Bash(docker compose exec:*)",
       "Bash(docker compose:*)",
-      "Bash(docker compose up:*)"
+      "Bash(docker compose up:*)",
+      "WebSearch"
     ]
   }
 }
