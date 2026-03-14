@@ -23,7 +23,7 @@ def print_file():
 
     try:
         result = subprocess.run(
-            ["lp", "-d", "myprinter", tmp_path],
+            ["lp", "-d", "Brother_DCP_L2540DW_series", tmp_path],
             capture_output=True,
             text=True,
         )
