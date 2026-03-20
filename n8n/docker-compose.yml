@@ -51,6 +51,8 @@ services:
       - postgres
     volumes:
       - n8n_storage:/home/node/.n8n
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     depends_on:
       postgres:
         condition: service_healthy
