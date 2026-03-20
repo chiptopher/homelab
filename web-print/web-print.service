@@ -1,0 +1,14 @@
+[Unit]
+Description=web-print
+After=network.target cups.service
+Requires=cups.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/web-print
+ExecStart=/opt/web-print/venv/bin/python server.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
