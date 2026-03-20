@@ -10,5 +10,7 @@ services:
       - "8631:8631"
     environment:
       - CUPS_SERVER=host.docker.internal
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     networks:
       - n8n_n8n_network
