@@ -8,7 +8,7 @@ services:
     restart: always
     ports:
       - "8631:8631"
-    volumes:
-      - /var/run/cups/cups.sock:/var/run/cups/cups.sock
+    environment:
+      - CUPS_SERVER=host.docker.internal
     networks:
       - n8n_n8n_network
