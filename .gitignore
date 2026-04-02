@@ -1,1 +1,7 @@
 *.pdf
+.DS_Store
+
+llm-chat/llama.cpp/
+llm-chat/models/
+llm-chat/llm-env/
+
