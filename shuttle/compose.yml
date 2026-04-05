@@ -1,0 +1,10 @@
+services:
+  shuttle:
+    image: ghcr.io/chiptopher/shuttle:latest
+    container_name: shuttle
+    restart: unless-stopped
+    environment:
+      - LLM_BASE_URL=http://host.docker.internal:8080/v1
+    volumes:
+      - /Users/christopherboyer/Library/CloudStorage/Dropbox/Documents/Processing/Input:/watched
+      - /Users/christopherboyer/Library/CloudStorage/Dropbox/Documents/Processing/Output:/destination
